@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" href="{{ site.static_metro }}/css/metro-bootstrap.css">
+    	<link rel="stylesheet" href="{{ site.static_metro }}/js/prettify/prettify.css">
+    	<script src="{{ site.static_metro }}/js/jquery/jquery.min.js"></script>
+    	<script src="{{ site.static_metro }}/js/jquery/jquery.widget.min.js"></script>
+    	<script src="{{ site.static_metro }}/js/prettify/prettify.js"></script>
+	    <title> {{ page.title }} </title>
+	</head>
+	<body  class="metro" >
+		<!-- 占位，这样滚动的时候，就不会像之前那样会闪一下了 -->
+		<header class="bg-dark border" data-load="header.html">
+			<div class="navigation-bar dark ">
+			    <div class="navigation-bar-content container">
+			      	<span > 
+			        </span>
+			        <span class="element-divider"></span>
+				</div>
+			</div>
+
+		</header>
+		<!-- 真正的头部 -->
+		<header class="bg-dark border" data-load="header.html">
+			<div class="navigation-bar dark fixed-top opacity shadow">
+			    <div class="navigation-bar-content container">
+			        <a href="{{ site.baseurl }}{{site.homepage}}" class="element">
+			        	<span class="icon-grid-view"></span>
+			            <!-- <img class="place-left" src="{{ site.baseurl }}/images/logo32.png" style="height: 20px"/> -->
+			           {{ site.title }} 
+			        </a>
+			        
+			        <span class="element-divider"></span>
+			        <a title="GitHub" href="https://github.com/wellwy/Blog" class="element place-right"><span class="icon-github-6"></a>
+			        </span>
+			      
+					<a href="//plus.google.com/111677137942009109381?prsrc=3"
+					   rel="publisher" target="_top" style="text-decoration:none;">
+					    <div class="element place-right" title="GitHub Forks">
+							<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;"/>
+					 	</div>
+					</a>
+				</div>
+			</div>
+		</header>
+		
+
+		<div class="container">
+			{{ content }}
+		</div>
+		<div style="height: 80px;"></div>
+    </body>
+    	<script type="text/javascript">
+    	$(window).load(function(){
+		     $("code").addClass("prettyprint");
+		     prettyPrint();
+		})
+    	</script>
+    	
+  {{% if site.googleAnalytics % }}
+  <!-- Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44963943-1', 'wellwy.github.io');
+  ga('send', 'pageview');
+</script>
+{{% end %}}
+
+
+</html>
