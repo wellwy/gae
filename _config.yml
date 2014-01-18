@@ -13,7 +13,7 @@ author :
 baseurl : /gae
 homepage : /index.html
 graphs : /gae/include/graphs
-static_metro : http://wellwy.tk/static/include/metro
+static_metro : /static/include/metro
 
 comments: true
 googleAnalytics : true
